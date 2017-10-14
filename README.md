@@ -1,14 +1,14 @@
-## Easy Human Auth
+# Easy Human Auth
 
 Simple apis for identifying human which protects your application far away from robots.
 
-## Installation
+### Installation
 
 Run the following to include this via Composer
-```
+```php
 composer require jqqjj/easy-human-auth
 ```
-# Usage
+### Usage
 
 Create mysql tables(when using  DBTableGateway adapter)
 ```sql
