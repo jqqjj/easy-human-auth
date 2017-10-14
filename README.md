@@ -50,6 +50,11 @@ if($object->check()){
 
 //Mark humans if you make sure the client is not a robot
 $object->humanAction();
+
+//Finally, output the cookie
+$object->outputCookie();
+//OR
+header("Set-Cookie:".$object->getCookieString());
 ```
 
 ### License
