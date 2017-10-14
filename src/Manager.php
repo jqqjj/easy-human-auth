@@ -23,12 +23,12 @@ class Manager
         $this->handshake->expired_time = date("Y-m-d H:i:s",time()+$this->lifttime);
     }
     
-    public function action()
+    public function attemptFailure()
     {
         $this->handshake->addAttempt(0);
     }
     
-    public function humanAction()
+    public function attemptSuccess()
     {
         $this->handshake->addAttempt(1);
     }

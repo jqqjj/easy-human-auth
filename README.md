@@ -38,8 +38,11 @@ $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 $adapter = new DBTableGateway($pdo);
 $object = new Manager($adapter);
 
-//Put the codes where application needs protection
-$object->action();
+//Run the codes when the client do something incorrectly
+$object->attemptFailure();
+
+//Run the codes when the client do things as you want to be
+$object->attemptSuccess();
 
 //Check it, it will return false when the client is a robot
 if($object->check()){
@@ -47,9 +50,6 @@ if($object->check()){
 }else{
 	//robot
 }
-
-//Mark humans if you make sure the client is not a robot
-$object->humanAction();
 
 //Finally, output the cookie
 $object->outputCookie();
