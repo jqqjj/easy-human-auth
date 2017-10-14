@@ -13,17 +13,16 @@ composer require jqqjj/easy-human-auth
 Create mysql tables(when using  DBTableGateway adapter)
 ```sql
 CREATE TABLE `handshake` (
-  `handshake_id` varchar(32) NOT NULL,
+  `handshake_id` char(32) NOT NULL,
   `remaining` int(10) unsigned DEFAULT NULL,
   `expired_time` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`handshake_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 CREATE TABLE `attempt` (
-  `handshake_id` varchar(32) NOT NULL,
+  `handshake_id` char(32) NOT NULL,
   `status` tinyint(3) unsigned NOT NULL,
   `add_time` timestamp NULL DEFAULT NULL,
-  `ip` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `ip` char(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 Code:
