@@ -1,13 +1,17 @@
-#Easy Human Auth
+## Easy Human Auth
+
 Simple apis for identifying human which protects your application far away from robots.
-###Installation
+
+## Installation
+
 Run the following to include this via Composer
 ```
 composer require jqqjj/easy-human-auth
 ```
-###Usage
+# Usage
+
 Create mysql tables(when using  DBTableGateway adapter)
-```
+```sql
 CREATE TABLE `handshake` (
   `handshake_id` varchar(32) NOT NULL,
   `remaining` int(10) unsigned DEFAULT NULL,
@@ -23,7 +27,7 @@ CREATE TABLE `attempt` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 Code:
-```
+```php
 use Jqqjj\HumanAuthFriendly\Manager;
 use Jqqjj\HumanAuthFriendly\Adapter\DBTableGateway;
 
@@ -49,5 +53,5 @@ if($object->check()){
 $object->humanAction();
 ```
 
-###License
+### License
 This package is licensed under the [MIT license](http://opensource.org/licenses/MIT).
