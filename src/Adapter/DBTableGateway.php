@@ -47,8 +47,8 @@ class DBTableGateway implements AdapterInterface
     
     public function updateHandshake($handshake_id,array $data)
     {
-        $where = ['handshake_id'=>$handshake_id];
-        $where_keys = [];
+        $where = array('handshake_id'=>$handshake_id);
+        $where_keys = array();
         foreach (array_keys($where) AS $value)
         {
             $where_keys[] = "`$value`=?";

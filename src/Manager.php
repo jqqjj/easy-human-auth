@@ -8,7 +8,7 @@ use Jqqjj\HumanAuthFriendly\Handshake;
 class Manager
 {
     public $cookie_key = "_humanAuthFriendly";
-    public $lifttime = 3600 * 24 * 30;
+    public $lifttime = 2592000;//3600 * 24 * 30
     public $path = '/';
     public $domain;
     public $secure = false;

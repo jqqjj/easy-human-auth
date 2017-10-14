@@ -26,12 +26,12 @@ class Handshake
             if(empty($attributes)){
                 throw new RuntimeException("Add Handshake Error.");
             }
-            $attributes['remaining'] = max([$remaining,$attributes['remaining']]);
+            $attributes['remaining'] = max(array($remaining,$attributes['remaining']));
             $this->_loadAttributes($attributes);
             $this->_freshenOriginalAttributes();
             $this->addAttempt(0);
         }else{
-            $attributes['remaining'] = max([$remaining,$attributes['remaining']]);
+            $attributes['remaining'] = max(array($remaining,$attributes['remaining']));
             $this->_loadAttributes($attributes);
             $this->_freshenOriginalAttributes();
         }
@@ -58,7 +58,7 @@ class Handshake
             $this->resetRemaining();
         }else{
             $this->adapter->addAttempt($this->getId(), 0, time(), $_SERVER['REMOTE_ADDR']);
-            $this->attributes->remaining = max([$this->attributes->remaining - 1,0]);
+            $this->attributes->remaining = max(array($this->attributes->remaining - 1,0));
         }
     }
     
@@ -112,7 +112,7 @@ class Handshake
             }
             $use++;
         }
-        return max([$this->max_attack_num - $use , 0]);
+        return max(array($this->max_attack_num - $use , 0));
     }
     
     public function __set($name, $value)
