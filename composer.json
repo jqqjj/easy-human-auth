@@ -1,6 +1,6 @@
 {
-    "name": "jqqjj/human-auth-friendly",
-    "description": "A library for protecting attacks from machines",
+    "name": "jqqjj/easy-human-auth",
+    "description": "Simple APIs for protecting your application,let your website far away from robots",
     "type": "php",
     "license": "MIT",
     "authors": [
@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5"
+        "php": ">=5.4"
     },
     "require-dev": {
     },
