@@ -1,6 +1,6 @@
 # Easy Human Auth
 
-Simple apis for identifying human which protects your application far away from robots.
+Simple APIs for protecting your application far away from robots.
 
 ### Installation
 
