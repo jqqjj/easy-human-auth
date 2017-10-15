@@ -16,12 +16,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jqqjj\\HumanAuthFriendly\\": "src/"
+            "Jqqjj\\EasyHumanAuth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jqqjj\\HumanAuthFriendly\\Tests\\": "tests/"
+            "Jqqjj\\EasyHumanAuth\\Tests\\": "tests/"
         }
     }
 }
