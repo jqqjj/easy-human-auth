@@ -1,8 +1,8 @@
 <?php
 
-namespace Jqqjj\HumanAuthFriendly\Adapter;
+namespace Jqqjj\EasyHumanAuth\Adapter;
 
-use Jqqjj\HumanAuthFriendly\Adapter\AdapterInterface;
+use Jqqjj\EasyHumanAuth\Adapter\AdapterInterface;
 
 class DBTableGateway implements AdapterInterface
 {

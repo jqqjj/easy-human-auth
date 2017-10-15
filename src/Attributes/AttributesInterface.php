@@ -1,6 +1,6 @@
 <?php
 
-namespace Jqqjj\HumanAuthFriendly\Attributes;
+namespace Jqqjj\EasyHumanAuth\Attributes;
 
 interface AttributesInterface
 {

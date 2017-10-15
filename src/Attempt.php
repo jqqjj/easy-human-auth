@@ -1,8 +1,8 @@
 <?php
 
-namespace Jqqjj\HumanAuthFriendly;
+namespace Jqqjj\EasyHumanAuth;
 
-use Jqqjj\HumanAuthFriendly\Attributes\AttemptAttributes;
+use Jqqjj\EasyHumanAuth\Attributes\AttemptAttributes;
 
 class Attempt
 {

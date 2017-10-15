@@ -1,6 +1,6 @@
 <?php
 
-namespace Jqqjj\HumanAuthFriendly\Exception;
+namespace Jqqjj\EasyHumanAuth\Exception;
 
 class RuntimeException extends \RuntimeException
 {

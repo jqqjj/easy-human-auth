@@ -1,8 +1,8 @@
 <?php
 
-namespace Jqqjj\HumanAuthFriendly\Attributes;
+namespace Jqqjj\EasyHumanAuth\Attributes;
 
-use Jqqjj\HumanAuthFriendly\Exception\RuntimeException;
+use Jqqjj\EasyHumanAuth\Exception\RuntimeException;
 
 abstract class AbstractAttributes
 {

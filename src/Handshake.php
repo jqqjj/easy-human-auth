@@ -1,10 +1,10 @@
 <?php
 
-namespace Jqqjj\HumanAuthFriendly;
+namespace Jqqjj\EasyHumanAuth;
 
-use Jqqjj\HumanAuthFriendly\Attributes\HandshakeAttributes;
-use Jqqjj\HumanAuthFriendly\Adapter\AdapterInterface;
-use Jqqjj\HumanAuthFriendly\Exception\RuntimeException;
+use Jqqjj\EasyHumanAuth\Attributes\HandshakeAttributes;
+use Jqqjj\EasyHumanAuth\Adapter\AdapterInterface;
+use Jqqjj\EasyHumanAuth\Exception\RuntimeException;
 
 class Handshake
 {

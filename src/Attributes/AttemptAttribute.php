@@ -1,9 +1,9 @@
 <?php
 
-namespace Jqqjj\HumanAuthFriendly\Attributes;
+namespace Jqqjj\EasyHumanAuth\Attributes;
 
-use Jqqjj\HumanAuthFriendly\Attributes\AbstractAttributes;
-use Jqqjj\HumanAuthFriendly\Attributes\AttributesInterface;
+use Jqqjj\EasyHumanAuth\Attributes\AbstractAttributes;
+use Jqqjj\EasyHumanAuth\Attributes\AttributesInterface;
 
 class AttemptAttributes extends AbstractAttributes implements AttributesInterface
 {

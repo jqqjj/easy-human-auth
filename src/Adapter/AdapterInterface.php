@@ -1,6 +1,6 @@
 <?php
 
-namespace Jqqjj\HumanAuthFriendly\Adapter;
+namespace Jqqjj\EasyHumanAuth\Adapter;
 
 interface AdapterInterface
 {

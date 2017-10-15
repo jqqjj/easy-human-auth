@@ -1,13 +1,13 @@
 <?php
 
-namespace Jqqjj\HumanAuthFriendly;
+namespace Jqqjj\EasyHumanAuth;
 
-use Jqqjj\HumanAuthFriendly\Adapter\AdapterInterface;
-use Jqqjj\HumanAuthFriendly\Handshake;
+use Jqqjj\EasyHumanAuth\Adapter\AdapterInterface;
+use Jqqjj\EasyHumanAuth\Handshake;
 
 class Manager
 {
-    public $cookie_key = "_humanAuthFriendly";
+    public $cookie_key = "_easyHumanAuth";
     public $lifttime = 2592000;//3600 * 24 * 30
     public $path = '/';
     public $domain;

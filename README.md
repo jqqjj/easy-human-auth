@@ -27,8 +27,8 @@ CREATE TABLE `attempt` (
 ```
 Code:
 ```php
-use Jqqjj\HumanAuthFriendly\Manager;
-use Jqqjj\HumanAuthFriendly\Adapter\DBTableGateway;
+use Jqqjj\EasyHumanAuth\Manager;
+use Jqqjj\EasyHumanAuth\Adapter\DBTableGateway;
 
 //Create a PDO object
 $pdo = new \PDO('mysql:host=localhost;port=3306;dbname=yourdbname','dbuser','dbpasswd');
