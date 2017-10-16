@@ -7,7 +7,7 @@ use Jqqjj\EasyHumanAuth\Handshake;
 
 class Manager
 {
-    public $cookie_key = "_easyHumanAuth";
+    public static $cookie_key = "_easyHumanAuth";
     public $lifttime = 2592000;//3600 * 24 * 30
     public $path = '/';
     public $domain;
@@ -19,7 +19,7 @@ class Manager
     public function __construct(AdapterInterface $adapter,$handshake_id=null)
     {
 		if(empty($handshake_id)){
-			$handshake_id = !empty($_COOKIE) && !empty($_COOKIE[$this->cookie_key]) ? $_COOKIE[$this->cookie_key] : "";
+			$handshake_id = !empty($_COOKIE) && !empty($_COOKIE[static::$cookie_key]) ? $_COOKIE[static::$cookie_key] : "";
 		}
         $this->handshake = new Handshake($handshake_id,$adapter);
         $this->handshake->expired_time = date("Y-m-d H:i:s",time()+$this->lifttime);
@@ -40,6 +40,11 @@ class Manager
         return $this->handshake->getRemaining() > 0;
     }
 	
+	public function getCookieKey()
+	{
+		return static::$cookie_key;
+	}
+	
 	public function getHandshakeId()
 	{
 		return $this->handshake->getId();
@@ -52,7 +57,7 @@ class Manager
     
     public function getCookieString()
     {
-        $str = "{$this->cookie_key}={$this->handshake->getId()}";
+        $str = static::$cookie_key . "={$this->handshake->getId()}";
         $str .= ";expires=".gmdate('D, d-M-Y H:i:s T', $this->lifttime + time());
         $str .= ";Max-Age={$this->lifttime}";
         $str .= ";path={$this->path}";
@@ -70,6 +75,6 @@ class Manager
     
     public function outputCookie()
     {
-        setcookie($this->cookie_key, $this->handshake->getId(), $this->lifttime + time(), $this->path, $this->domain, $this->secure, $this->httponly);
+        setcookie(static::$cookie_key, $this->handshake->getId(), $this->lifttime + time(), $this->path, $this->domain, $this->secure, $this->httponly);
     }
 }
