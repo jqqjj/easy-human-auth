@@ -16,9 +16,11 @@ class Manager
     
     private $handshake;
     
-    public function __construct(AdapterInterface $adapter)
+    public function __construct(AdapterInterface $adapter,$handshake_id=null)
     {
-        $handshake_id = !empty($_COOKIE) && !empty($_COOKIE[$this->cookie_key]) ? $_COOKIE[$this->cookie_key] : "";
+		if(empty($handshake_id)){
+			$handshake_id = !empty($_COOKIE) && !empty($_COOKIE[$this->cookie_key]) ? $_COOKIE[$this->cookie_key] : "";
+		}
         $this->handshake = new Handshake($handshake_id,$adapter);
         $this->handshake->expired_time = date("Y-m-d H:i:s",time()+$this->lifttime);
     }
@@ -37,6 +39,11 @@ class Manager
     {
         return $this->handshake->getRemaining() > 0;
     }
+	
+	public function getHandshakeId()
+	{
+		return $this->handshake->getId();
+	}
     
     public function getHandshake()
     {
