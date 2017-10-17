@@ -115,4 +115,14 @@ class DBTableGateway implements AdapterInterface
             return null;
         }
     }
+	
+	public function setHandshakeTable($table)
+	{
+		$this->handshake_table = $table;
+	}
+	
+	public function setAttemptTable($table)
+	{
+		$this->attempt_table = $table;
+	}
 }
