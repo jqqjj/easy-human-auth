@@ -10,5 +10,6 @@ interface AdapterInterface
     public function getAttempts($handshake_id,$num);
     public function getIPAttempts($ip,$num);
     public function addAttempt($handshake_id,$status,$add_time,$ip);
+    public function clearTrash();
 }
 

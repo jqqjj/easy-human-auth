@@ -115,6 +115,12 @@ class DBTableGateway implements AdapterInterface
             return null;
         }
     }
+    
+    public function clearTrash()
+    {
+        $this->pdo->query("DELETE FROM {$this->handshake_table} WHERE expired_time<'".date("Y-m-d H:i:s")."'");
+        $this->pdo->query("DELETE FROM {$this->attempt_table} a WHERE NOT EXISTS (SELECT handshake_id FROM `l_handshake` h WHERE h.handshake_id=a.handshake_id)");
+    }
 	
 	public function setHandshakeTable($table)
 	{

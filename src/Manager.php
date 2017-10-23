@@ -39,6 +39,11 @@ class Manager
     {
         return $this->handshake->getRemaining() > 0;
     }
+    
+    public function clearTrash()
+    {
+        return $this->handshake->clearTrash();
+    }
 	
 	public function getCookieKey()
 	{

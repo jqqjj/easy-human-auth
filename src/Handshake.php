@@ -67,6 +67,11 @@ class Handshake
         $this->attributes->remaining = $this->max_attack_num;
     }
     
+    public function clearTrash()
+    {
+        return $this->adapter->clearTrash();
+    }
+    
     public function save()
     {
         $data = $this->attributes->toArray();
