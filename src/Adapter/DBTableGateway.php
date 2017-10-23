@@ -119,7 +119,7 @@ class DBTableGateway implements AdapterInterface
     public function clearTrash()
     {
         $this->pdo->query("DELETE FROM {$this->handshake_table} WHERE expired_time<'".date("Y-m-d H:i:s")."'");
-        $this->pdo->query("DELETE FROM {$this->attempt_table} a WHERE NOT EXISTS (SELECT handshake_id FROM `l_handshake` h WHERE h.handshake_id=a.handshake_id)");
+        $this->pdo->query("DELETE FROM {$this->attempt_table} WHERE handshake_id NOT IN (SELECT handshake_id FROM {$this->handshake_table})");
     }
 	
 	public function setHandshakeTable($table)
